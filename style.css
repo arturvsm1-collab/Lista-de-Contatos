@@ -1,0 +1,80 @@
+/* Define variáveis globais de cores e arredondamento */
+:root{--primary:#4f46e5;--bg:#f8fafc;--card:#fff;--text:#1e293b;--muted:#64748b;--border:#cbd5e1;--danger:#ef4444;--success:#22c55e;--radius:12px}
+
+/* Reset universal: remove margens/paddings padrão e padroniza o cálculo de tamanho (box-sizing) */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+
+/* Estilo base da página: cor de fundo, cor do texto e espaçamento interno */
+body{background:var(--bg);color:var(--text);padding:2rem 1rem}
+
+/* Container centralizado que limita a largura máxima da aplicação */
+.container{max-width:1100px;margin:0 auto}
+
+/* Estilização do cabeçalho principal */
+header{text-align:center;margin-bottom:2rem}
+header h1{font-size:2rem;color:var(--primary);margin-bottom:.5rem}
+header p{color:var(--muted)}
+
+/* Layout em Grid de duas colunas (formulário fixo + lista flexível) */
+.grid-layout{display:grid;grid-template-columns:350px 1fr;gap:2rem}
+
+/* Responsividade para telas menores (celulares): empilha tudo em 1 coluna */
+@media(max-width:768px){.grid-layout{grid-template-columns:1fr}}
+
+/* Estilo base dos cartões (formulário e blocos) com sombra suave */
+.card{background:var(--card);padding:1.5rem;border-radius:var(--radius);box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);height:fit-content}
+.card h2{font-size:1.25rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:.5rem}
+
+/* Organização dos campos do formulário */
+.input-group{margin-bottom:1rem;display:flex;flex-direction:column;gap:.35rem}
+.input-group label{font-size:.875rem;font-weight:500}
+.input-group input,.input-group select{padding:.75rem;border:1px solid var(--border);border-radius:8px;font-size:.95rem;outline:none}
+
+/* Efeito de foco nos inputs: muda a borda para a cor primária */
+.input-group input:focus,.input-group select:focus{border-color:var(--primary)}
+
+/* Botões do formulário alinhados em coluna */
+.form-buttons{display:flex;flex-direction:column;gap:.5rem;margin-top:1.5rem}
+
+/* Estilização geral dos botões */
+.btn{padding:.75rem;border:none;border-radius:8px;font-size:.95rem;font-weight:600;cursor:pointer}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:#4338ca}
+.btn.secondary{background:#e2e8f0;color:var(--text)}
+
+/* Barra de pesquisa com ícone posicionado de forma absoluta */
+.search-bar{position:relative;margin-bottom:1.5rem}
+.search-bar i{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--muted)}
+.search-bar input{width:100%;padding:.75rem .75rem .75rem 2.5rem;border:1px solid var(--border);border-radius:var(--radius);font-size:.95rem;background:#fff;outline:none}
+
+/* Grade que organiza os cards de contatos de forma responsiva */
+.contacts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+
+/* Cartão individual de cada contato listado */
+.contact-card{background:#fff;padding:1.25rem;border-radius:var(--radius);box-shadow:0 2px 4px rgb(0 0 0 / 0.05);border:1px solid #e2e8f0;display:flex;flex-direction:column;gap:.5rem}
+.contact-header{display:flex;justify-content:space-between;align-items:flex-start}
+.contact-name{font-weight:600;font-size:1.1rem}
+
+/* Etiqueta (badge) colorida para a categoria do contato */
+.badge{font-size:.7rem;padding:.2rem .5rem;border-radius:20px;background:#e0e7ff;color:var(--primary);font-weight:600}
+
+/* Informações internas do card (telefone e e-mail) */
+.contact-info{font-size:.875rem;color:var(--muted);display:flex;align-items:center;gap:.5rem}
+
+/* Área de ações do card (botões de editar e excluir) */
+.contact-actions{display:flex;gap:.5rem;margin-top:.75rem;padding-top:.75rem;border-top:1px solid #f1f5f9}
+.action-btn{flex:1;padding:.4rem;border:none;border-radius:6px;font-size:.8rem;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.3rem}
+.btn-edit{background:#f1f5f9;color:var(--text)}
+.btn-delete{background:#fee2e2;color:var(--danger)}
+
+/* Estado visual quando não há contatos cadastrados */
+.empty-state{grid-column:1/-1;text-align:center;padding:3rem;color:var(--muted)}
+.empty-state i{font-size:2.5rem;margin-bottom:.75rem;color:var(--border)}
+
+/* Notificação flutuante (Toast) de feedback de ações */
+.toast{position:fixed;top:20px;right:20px;background:var(--success);color:#fff;padding:.75rem 1.25rem;border-radius:8px;box-shadow:0 4px 6px rgb(0 0 0 / 0.1);font-weight:500;z-index:1000;transition:opacity .3s ease}
+.toast.hidden{opacity:0;pointer-events:none}
+.toast.error{background:var(--danger)}
+
+/* Classe utilitária global para ocultar elementos instantaneamente */
+.hidden{display:none !important}
