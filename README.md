@@ -26,11 +26,3 @@ Este projeto faz parte do meu portfólio de estudos em Front-End, focado em cons
 - FontAwesome: Ícones leves e intuitivos.
 - Google Fonts (Inter): Tipografia limpa e profissional.
 
----
-
-**Link de Acesso**
- - Github: Para o acesso remotamento você precisa ir no link aseguir:
-   git add .
-git commit -m "feat: projeto finalizado"
-git push origin main
-   [https://seu-usuario.github.io/nome-do-repositorio/](https://seu-usuario.github.io/nome-do-repositorio/)
