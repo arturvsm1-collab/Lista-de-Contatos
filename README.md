@@ -1,4 +1,4 @@
-Agenda de Contatos
+**Agenda de Contatos**
 
 Aplicação web moderna para gerenciamento de contatos pessoais e profissionais, desenvolvida inteiramente sem frameworks (Vanilla JS), utilizando apenas HTML5, CSS3 e JavaScript (ES6+).
 
@@ -6,7 +6,7 @@ Este projeto faz parte do meu portfólio de estudos em Front-End, focado em cons
 
 ---
 
-Funcionalidades (CRUD)
+**Funcionalidades (CRUD)**
 
 - Create (Criar): Formulário interativo para cadastro de novos contatos com validação de campos obrigatórios e máscara automática para o telefone (xx) xxxxx-xxxx.
 - Read (Ler): Listagem dinâmica em cards modernos e barra de busca em tempo real por nome ou telefone.
@@ -18,7 +18,7 @@ Funcionalidades (CRUD)
 
 ---
 
-Tecnologias Utilizadas
+**Tecnologias Utilizadas**
 
 - HTML5: Estrutura semântica da aplicação.
 - CSS3: Estilização moderna utilizando Variáveis CSS (`:root`), Flexbox, Grid Layout e Design Responsivo para dispositivos móveis.
@@ -27,9 +27,3 @@ Tecnologias Utilizadas
 - Google Fonts (Inter): Tipografia limpa e profissional.
 
 ---
-
-Como Rodar o Projeto Localmente
-
-1. Clone este repositório:
-   bash
-   git clone [https://github.com/SEU-USUARIO/agenda-contatos-js.git](https://github.com/SEU-USUARIO/agenda-contatos-js.git)
